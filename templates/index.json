@@ -1,0 +1,78 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1647959593b63ea6b2": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "collection": "shirts",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "swipe_on_mobile": true
+      }
+    },
+    "164392447876590836": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Trucker Hats",
+        "collection": "trucker-hats",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "swipe_on_mobile": true
+      }
+    },
+    "featured_products": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "727 Collection",
+        "collection": "727-collection-1",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "swipe_on_mobile": true
+      }
+    },
+    "custom_liquid_Fg7Btw": {
+      "type": "custom-liquid",
+      "custom_css": [],
+      "settings": {
+        "custom_liquid": ""
+      }
+    },
+    "custom-grids": {
+      "type": "custom-grids",
+      "settings": {
+        "items_per_page": 12
+      }
+    }    
+  },
+  "order": [
+    "1647959593b63ea6b2",
+    "164392447876590836",
+    "featured_products",
+    "custom_liquid_Fg7Btw",
+    "custom-grids"
+  ]
+}
