@@ -1,0 +1,170 @@
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "MVP Customs"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Shop MVP Now!"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "text-left",
+          "label": "Left"
+        },
+        {
+          "value": "text-center",
+          "label": "Center"
+        },
+        {
+          "value": "text-right",
+          "label": "Right"
+        }
+      ],
+      "default": "text-center"
+    },
+    {
+      "type": "range",
+      "id": "hero_height",
+      "min": 400,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "label": "Desktop height",
+      "default": 600
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Banner"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+.hero-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  text-align: {{ section.settings.text_alignment | replace: 'text-', '' }};
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-heading {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hero-subheading {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  text-shadow: none;
+}
+
+.hero-button:hover {
+  background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: 400px !important;
+  }
+  
+  .hero-heading {
+    font-size: 2rem;
+  }
+  
+  .hero-subheading {
+    font-size: 1.2rem;
+  }
+  
+  .hero-button {
+    padding: 12px 24px;
+  }
+}
+</style>
+
+<div class="hero-section" style="height: {{ section.settings.hero_height }}px;">
+  {%- if section.settings.hero_image -%}
+    {{ section.settings.hero_image | image_url: width: 2000 | image_tag:
+      loading: 'eager',
+      class: 'hero-image',
+      alt: section.settings.heading,
+      width: 2000,
+      height: section.settings.hero_height
+    }}
+  {%- endif -%}
+  
+  <div class="hero-content">
+    {%- if section.settings.heading != blank -%}
+      <h1 class="hero-heading">{{ section.settings.heading }}</h1>
+    {%- endif -%}
+    
+    {%- if section.settings.subheading != blank -%}
+      <p class="hero-subheading">{{ section.settings.subheading }}</p>
+    {%- endif -%}
+    
+    {%- if section.settings.button_link != blank and section.settings.button_text != blank -%}
+      <a href="{{ section.settings.button_link }}" class="hero-button">
+        {{ section.settings.button_text }}
+      </a>
+    {%- endif -%}
+  </div>
+</div>
