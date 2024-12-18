@@ -118,10 +118,10 @@
         "items_per_page": 12
       }
     },
-    "text-slider": {
+    "mvp-text-slider": {
       "type": "mvp-text-slider",
       "settings": {
-        "items_per_page": 12
+        "slider_text": "free shipping on all orders"
       }
     }    
   },
@@ -130,7 +130,7 @@
     "164392447876590836",
     "featured_products",
     "hero-banner",
-    "text-slider",
+    "mvp-text-slider",
     "custom-grids"
   ]
 }
