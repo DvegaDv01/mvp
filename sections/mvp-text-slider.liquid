@@ -1,0 +1,149 @@
+{% schema %}
+{
+  "name": "Text Slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "slider_text",
+      "label": "Slider Text",
+      "default": "MVP CUSTOMS",
+      "info": "Repeated text in a slider"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "label": "Font Size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "slider_speed",
+      "min": 5,
+      "max": 60,
+      "step": 5,
+      "unit": "s",
+      "label": "Slider Speed",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "spacing",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top/Bottom Spacing",
+      "default": 2
+    }
+  ],
+  "presets": [
+    {
+      "name": "Text Slider",
+    }
+  ]
+}
+{% endschema %}
+
+<div class="text-slider-container" style="
+    background-color: {{ section.settings.background_color }};
+    margin: {{ section.settings.spacing }}px 0;">
+    <div class="text-slider" style="animation: scroll {{ section.settings.slider_speed }}s linear infinite;">
+        <ul class="slider-track">
+            {% for i in (1..8) %}
+                <li class="slider-text" style="
+                    font-size: {{ section.settings.text_size }}px;
+                    color: {{ section.settings.text_color }};">
+                    {{ section.settings.slider_text }}
+                </li>
+            {% endfor %}
+
+            {% for i in (1..8) %}
+                <li class="slider-text" style="
+                    font-size: {{ section.settings.text_size }}px;
+                    color: {{ section.settings.text_color }};">
+                    {{ section.settings.slider_text }}
+                </li>
+            {% endfor %}
+
+            {% for i in (1..8) %}
+                <li class="slider-text" style="
+                    font-size: {{ section.settings.text_size }}px;
+                    color: {{ section.settings.text_color }};">
+                    {{ section.settings.slider_text }}
+                </li>
+            {% endfor %}
+
+            {% for i in (1..8) %}
+                <li class="slider-text" style="
+                    font-size: {{ section.settings.text_size }}px;
+                    color: {{ section.settings.text_color }};">
+                    {{ section.settings.slider_text }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<style>
+    .text-slider-container {
+      width: 100%;
+      position: relative;
+      overflow: hidden;      
+    }
+
+    .text-slider-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+      }
+    
+    .text-slider {
+      display: flex;
+      white-space: nowrap;
+      will-change: transform;
+    }
+    
+    .slider-text {
+      flex-shrink: 0;
+      padding: 0px 0px;
+      margin-left: 5px;
+      margin-right: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.25rem;
+      list-style: none;
+    }
+
+    .slider-track {
+        display: flex;
+        flex-shrink: 0;
+      }
+    
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-100% - 10px));
+      }
+    }
+    </style>

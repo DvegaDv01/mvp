@@ -96,8 +96,8 @@
         "padding_bottom": 36
       }
     },
-    "hero_banner": {
-      "type": "hero-banner",
+    "hero-banner": {
+      "type": "mvp-hero-banner",
       "custom_css": [
         ".hero-heading {color: white; }",
         ".hero-button {}"
@@ -113,17 +113,24 @@
       }
     },
     "custom-grids": {
-      "type": "custom-grids",
+      "type": "mvp-grids",
       "settings": {
         "items_per_page": 12
       }
-    }
+    },
+    "text-slider": {
+      "type": "mvp-text-slider",
+      "settings": {
+        "items_per_page": 12
+      }
+    }    
   },
   "order": [
     "1647959593b63ea6b2",
     "164392447876590836",
     "featured_products",
-    "hero_banner",
+    "hero-banner",
+    "text-slider",
     "custom-grids"
   ]
 }
