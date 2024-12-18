@@ -84,15 +84,15 @@
 
 .hero-content {
   position: absolute;
-  top: 50%;
+  top: 18rem;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 800px;
-  padding: 20px;
+  padding: 10px;
   text-align: {{ section.settings.text_alignment | replace: 'text-', '' }};
   color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0.75rem 0.75rem 5px rgba(0, 0, 0, 0.3);
 }
 
 .hero-heading {
@@ -113,13 +113,24 @@
   color: #000000;
   text-decoration: none;
   border-radius: 5px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
   font-weight: bold;
   transition: background-color 0.3s ease;
   text-shadow: none;
 }
 
+.hero-button-container {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
 .hero-button:hover {
-  background-color: #f0f0f0;
+  background-color:rgba(240, 240, 240, 0.92);
+  border-color: rgba(93, 238, 93, 0.83); 
 }
 
 @media screen and (max-width: 768px) {
@@ -161,10 +172,14 @@
       <p class="hero-subheading">{{ section.settings.subheading }}</p>
     {%- endif -%}
     
-    {%- if section.settings.button_link != blank and section.settings.button_text != blank -%}
+  </div>
+  
+  {%- if section.settings.button_link != blank and section.settings.button_text != blank -%}
+    <div class="hero-button-container">
       <a href="{{ section.settings.button_link }}" class="hero-button">
         {{ section.settings.button_text }}
       </a>
-    {%- endif -%}
   </div>
+  {%- endif -%}
+
 </div>

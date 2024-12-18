@@ -1,1 +1,84 @@
-{"name":"t:sections.header.name","type":"header","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"acbf15ac-e532-49ff-821f-9e88fd723533":{"type":"announcement","disabled":true,"settings":{"text":"FREE SHIPPING ON ALL ORDERS!","link":""}},"bacd9e0c-3210-4994-86be-4b6aaad6dfe3":{"type":"announcement","disabled":true,"settings":{"text":"SITE WIDE BLOWOUT SALE!","link":""}},"b07dd984-dd2d-4426-ad41-c847208af697":{"type":"announcement","disabled":true,"settings":{"text":"OTJ X MVP collab available now at - www.otjmonopoly.com","link":""}}},"block_order":["acbf15ac-e532-49ff-821f-9e88fd723533","bacd9e0c-3210-4994-86be-4b6aaad6dfe3","b07dd984-dd2d-4426-ad41-c847208af697"],"settings":{}},"header":{"type":"header","settings":{"logo_position":"top-center","menu":"main-menu","show_line_separator":false,"color_scheme":"inverse"}}},"order":["announcement-bar","header"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "acbf15ac-e532-49ff-821f-9e88fd723533": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "FREE SHIPPING ON ALL ORDERS!",
+            "link": ""
+          }
+        },
+        "bacd9e0c-3210-4994-86be-4b6aaad6dfe3": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "SITE WIDE BLOWOUT SALE!",
+            "link": ""
+          }
+        },
+        "b07dd984-dd2d-4426-ad41-c847208af697": {
+          "type": "announcement",
+          "disabled": true,
+          "settings": {
+            "text": "OTJ X MVP collab available now at - www.otjmonopoly.com",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "acbf15ac-e532-49ff-821f-9e88fd723533",
+        "bacd9e0c-3210-4994-86be-4b6aaad6dfe3",
+        "b07dd984-dd2d-4426-ad41-c847208af697"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "custom_css": [
+        ".header {display: grid; }"
+      ],
+      "settings": {
+        "logo_position": "top-center",
+        "menu": "main-menu",
+        "menu_type_desktop": "dropdown",
+        "sticky_header_type": "on-scroll-up",
+        "show_line_separator": false,
+        "color_scheme": "inverse",
+        "menu_color_scheme": "",
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "enable_customer_avatar": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
