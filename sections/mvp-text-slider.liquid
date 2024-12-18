@@ -27,7 +27,7 @@
       "step": 5,
       "unit": "s",
       "label": "Slider Speed",
-      "default": 20
+      "default": 45
     },
     {
       "type": "color",
@@ -49,7 +49,7 @@
       "step": 5,
       "unit": "px",
       "label": "Top/Bottom Spacing",
-      "default": 2
+      "default": 0
     }
   ],
   "presets": [
@@ -102,9 +102,9 @@
 
 <style>
     .text-slider-container {
-      width: 100%;
-      position: relative;
-      overflow: hidden;      
+        width: 100%;
+        position: relative;
+        overflow: hidden;
     }
 
     .text-slider-container::after {
@@ -118,19 +118,24 @@
       }
     
     .text-slider {
-      display: flex;
-      white-space: nowrap;
-      will-change: transform;
+        display: flex;
+        white-space: nowrap;
+        will-change: transform;
     }
     
     .slider-text {
-      flex-shrink: 0;
-      padding: 0px 0px;
-      margin-left: 5px;
-      margin-right: 5px;
-      text-transform: uppercase;
-      letter-spacing: 0.25rem;
-      list-style: none;
+        flex-shrink: 0;
+        padding: 0px 0px;
+        margin-left: 0.5rem;
+        margin-right: 0.25rem;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        list-style: none;
+    }
+
+    .slider-text:before {
+        content: "★";
+        margin-right: 0.25rem;
     }
 
     .slider-track {
