@@ -108,11 +108,11 @@
 
 .hero-button {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 0.25rem 0.5rem;
   background-color: #ffffff;
   color: #000000;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 25px;
   border: 2px solid transparent;
   transition: border-color 0.3s ease;
   font-weight: bold;
@@ -126,6 +126,7 @@
   left: 0;
   right: 0;
   text-align: center;
+  
 }
 
 .hero-button:hover {
@@ -163,7 +164,7 @@
     }}
   {%- endif -%}
   
-  <div class="hero-content">
+  {% comment %} <div class="hero-content">
     {%- if section.settings.heading != blank -%}
       <h1 class="hero-heading">{{ section.settings.heading }}</h1>
     {%- endif -%}
@@ -172,7 +173,7 @@
       <p class="hero-subheading">{{ section.settings.subheading }}</p>
     {%- endif -%}
     
-  </div>
+  </div> {% endcomment %}
   
   {%- if section.settings.button_link != blank and section.settings.button_text != blank -%}
     <div class="hero-button-container">
