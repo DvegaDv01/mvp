@@ -99,38 +99,191 @@
     "hero-banner": {
       "type": "mvp-hero-banner",
       "custom_css": [
-        ".hero-heading {color: white; }",
+        ".hero-heading {color: white;}",
         ".hero-button {}"
       ],
       "settings": {
-        "hero_image": "shopify://shop_images/Black_and_White_Modern_Grunge_Plastic_Texture_Streetwear_Landscape_Banner_2.png",
+        "hero_image": "shopify://shop_images/Landscape_Banner.png",
         "heading": "",
         "subheading": "",
         "button_link": "/collections/all",
         "button_text": "Shop Now",
         "text_alignment": "text-center",
-        "hero_height": 600
+        "hero_height": 600,
+        "mobile_hero_height": 500
       }
     },
-    "custom-grids": {
-      "type": "mvp-grids",
+    "ss_countdown_MDeCgr": {
+      "type": "ss-countdown",
+      "blocks": {
+        "text_WEkCzf": {
+          "type": "text",
+          "settings": {
+            "heading": "<p>Collection Drop</p>",
+            "color": "#ffffff",
+            "font_size": 30,
+            "richtext": "",
+            "richtext_color": "#ffffff",
+            "richtext_font_size": 14
+          }
+        },
+        "button_tCtyE9": {
+          "type": "button",
+          "settings": {
+            "button_text": "Join Waitlist",
+            "button_link": "",
+            "color": "#000000",
+            "background_color": "#ffffff",
+            "button_border_color": "#5dee5d",
+            "border_radius": 50,
+            "font_size": 18,
+            "button_border_thickness": 1
+          }
+        },
+        "timer_Lx4LDY": {
+          "type": "timer",
+          "settings": {
+            "year": "2025",
+            "month": "01",
+            "day": "14",
+            "hour": "00",
+            "minute": "00",
+            "hide_timer_on_completed": false,
+            "timer_completed_text": "",
+            "color": "#FFFFFF",
+            "days_text": "Days",
+            "hours_text": "Hours",
+            "minutes_text": "Minutes",
+            "seconds_text": "Seconds"
+          }
+        }
+      },
+      "block_order": [
+        "text_WEkCzf",
+        "button_tCtyE9",
+        "timer_Lx4LDY"
+      ],
       "settings": {
-        "items_per_page": 12
+        "full_width": false,
+        "height": "300px",
+        "height_mobile": "250px",
+        "image": "shopify://shop_images/MVP_Official_Logo_Customs_Added_PNG.png",
+        "no_image_bg_color": "#FFFFFF",
+        "blur": false,
+        "overlay_opacity": 30,
+        "overlay_color": "#000000",
+        "image_mobile": "shopify://shop_images/MVP_Official_Logo_Customs_Added_PNG.png",
+        "border_radius": 15,
+        "lazy_load": true,
+        "background-color": "#ffffff",
+        "padding_top": 16,
+        "padding_bottom": 16
       }
     },
     "mvp-text-slider": {
       "type": "mvp-text-slider",
       "settings": {
-        "slider_text": "free shipping on all orders"
+        "slider_text": "free shipping on all orders",
+        "text_size": 12,
+        "slider_speed": 15,
+        "text_color": "#333333",
+        "background_color": "#ffffff",
+        "spacing": 0
       }
-    }    
+    },
+    "featured_collection_97PJYx": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "New Arrivals",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "in-the-game",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_LRekQ8": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pJWycN": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us",
+            "heading_size": "h1"
+          }
+        },
+        "text_dJJfYJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We celebrate those who push beyond boundaries and dare to be different. Our brand isn't just about clothing – it's about a mindset that drives you to go the extra mile, every single time.</p><p>Authenticity runs through everything we do, from our designs to our community.</p><p>We create for the dreamers, the doers, and the ones who refuse to settle for ordinary.</p><p>The moment you're here, you're family. This isn't just another streetwear brand – it's a community of like-minded individuals who understand that true style comes from being unapologetically yourself.</p><p>Welcome home.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_XJegQT": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_pJWycN",
+        "text_dJJfYJ",
+        "button_XJegQT"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/IMG_4126.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom-grids": {
+      "type": "mvp-grids",
+      "disabled": true,
+      "settings": {
+        "items_per_page": 12
+      }
+    }
   },
   "order": [
     "1647959593b63ea6b2",
     "164392447876590836",
     "featured_products",
     "hero-banner",
+    "ss_countdown_MDeCgr",
     "mvp-text-slider",
+    "featured_collection_97PJYx",
+    "image_with_text_LRekQ8",
     "custom-grids"
   ]
 }
