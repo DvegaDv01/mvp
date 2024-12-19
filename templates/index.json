@@ -113,73 +113,6 @@
         "mobile_hero_height": 500
       }
     },
-    "ss_countdown_MDeCgr": {
-      "type": "ss-countdown",
-      "blocks": {
-        "text_WEkCzf": {
-          "type": "text",
-          "settings": {
-            "heading": "<p>Collection Drop</p>",
-            "color": "#ffffff",
-            "font_size": 30,
-            "richtext": "",
-            "richtext_color": "#ffffff",
-            "richtext_font_size": 14
-          }
-        },
-        "button_tCtyE9": {
-          "type": "button",
-          "settings": {
-            "button_text": "Join Waitlist",
-            "button_link": "",
-            "color": "#000000",
-            "background_color": "#ffffff",
-            "button_border_color": "#5dee5d",
-            "border_radius": 50,
-            "font_size": 18,
-            "button_border_thickness": 1
-          }
-        },
-        "timer_Lx4LDY": {
-          "type": "timer",
-          "settings": {
-            "year": "2025",
-            "month": "01",
-            "day": "14",
-            "hour": "00",
-            "minute": "00",
-            "hide_timer_on_completed": false,
-            "timer_completed_text": "",
-            "color": "#FFFFFF",
-            "days_text": "Days",
-            "hours_text": "Hours",
-            "minutes_text": "Minutes",
-            "seconds_text": "Seconds"
-          }
-        }
-      },
-      "block_order": [
-        "text_WEkCzf",
-        "button_tCtyE9",
-        "timer_Lx4LDY"
-      ],
-      "settings": {
-        "full_width": false,
-        "height": "300px",
-        "height_mobile": "250px",
-        "image": "shopify://shop_images/MVP_Official_Logo_Customs_Added_PNG.png",
-        "no_image_bg_color": "#FFFFFF",
-        "blur": false,
-        "overlay_opacity": 30,
-        "overlay_color": "#000000",
-        "image_mobile": "shopify://shop_images/MVP_Official_Logo_Customs_Added_PNG.png",
-        "border_radius": 15,
-        "lazy_load": true,
-        "background-color": "#ffffff",
-        "padding_top": 16,
-        "padding_bottom": 16
-      }
-    },
     "mvp-text-slider": {
       "type": "mvp-text-slider",
       "settings": {
@@ -225,14 +158,14 @@
         "heading_pJWycN": {
           "type": "heading",
           "settings": {
-            "heading": "About Us",
-            "heading_size": "h1"
+            "heading": "<strong>About Us</strong>",
+            "heading_size": "h0"
           }
         },
         "text_dJJfYJ": {
           "type": "text",
           "settings": {
-            "text": "<p>We celebrate those who push beyond boundaries and dare to be different. Our brand isn't just about clothing – it's about a mindset that drives you to go the extra mile, every single time.</p><p>Authenticity runs through everything we do, from our designs to our community.</p><p>We create for the dreamers, the doers, and the ones who refuse to settle for ordinary.</p><p>The moment you're here, you're family. This isn't just another streetwear brand – it's a community of like-minded individuals who understand that true style comes from being unapologetically yourself.</p><p>Welcome home.</p>",
+            "text": "<p>We celebrate those who push beyond boundaries and dare to be different. Authenticity runs through everything we do, from our designs to our community.</p><p>Join a community that's rooted with a mindset driven to go the extra mile, every single time.</p><p>Sign up and become apart of our community of like-minded individuals who understand that true style comes from being unapologetically yourself.</p>",
             "text_style": "body"
           }
         },
@@ -250,9 +183,11 @@
         "text_dJJfYJ",
         "button_XJegQT"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".image-with-text__content {text-justify: auto; line-height: 1.6; letter-spacing: normal;}"
+      ],
       "settings": {
-        "image": "shopify://shop_images/IMG_4126.jpg",
+        "image": "shopify://shop_images/IMG_1503.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -262,9 +197,83 @@
         "section_color_scheme": "scheme-2",
         "color_scheme": "",
         "image_behavior": "none",
-        "mobile_content_alignment": "center",
+        "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "slideshow_AwntRC": {
+      "type": "slideshow",
+      "blocks": {
+        "slide_EcMcTY": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/IMG_1498.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_Rgjdcp": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/IMG_1495.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "slide_L6BNAb": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/IMG_1496_1.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "slide_EcMcTY",
+        "slide_Rgjdcp",
+        "slide_L6BNAb"
+      ],
+      "settings": {
+        "layout": "grid",
+        "slide_height": "medium",
+        "slider_visual": "dots",
+        "auto_rotate": false,
+        "change_slides_speed": 3,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Jersey Collection"
       }
     },
     "custom-grids": {
@@ -280,10 +289,10 @@
     "164392447876590836",
     "featured_products",
     "hero-banner",
-    "ss_countdown_MDeCgr",
     "mvp-text-slider",
     "featured_collection_97PJYx",
     "image_with_text_LRekQ8",
+    "slideshow_AwntRC",
     "custom-grids"
   ]
 }
