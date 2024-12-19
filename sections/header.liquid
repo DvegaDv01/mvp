@@ -64,12 +64,104 @@
     line-height: calc(1 + 0.8 / var(--font-body-scale));
   }
 
+  .header__heading-logo {
+    width: auto;
+    max-width: {{ settings.logo_width_mobile }}px;
+    {% if section.settings.logo_animation != 'none' %}
+      animation: {{ section.settings.logo_animation }}-animation {{ section.settings.animation_duration }}s ease-out;
+    {% endif %}    
+  }
+  
+  @media screen and (min-width: 750px) {
+    .header__heading-logo {
+      max-width: {{ settings.logo_width }}px;
+      
+    }
+  }
+  
   @media screen and (min-width: 750px) {
     .list-menu__item--link {
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
     }
   }
+  
+  @keyframes fade-animation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slide-animation {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce-animation {
+    0% {
+      transform: scale(0.3);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+    70% { transform: scale(0.9); }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes scale-animation {
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes spin-animation {
+    0% {
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+    50% {
+      transform: rotate(720deg);
+      opacity: 0.5;
+    }
+    100% {
+      transform: rotate(1080deg);
+      opacity: 1;
+    }
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+  }  
 </style>
 
 {%- style -%}
@@ -138,8 +230,9 @@
               <div class="header__heading-logo-wrapper">
                 {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
                 {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-                {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+                {%- assign logo_height_mobile = settings.logo_width_mobile | divided_by: settings.logo.aspect_ratio -%}
+                {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, {{ settings.logo_width_mobile }}px{% endcapture %}
+                {% capture widths %}{{ settings.logo_width_mobile }}, {{ settings.logo_width }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
                 {{ settings.logo | image_url: width: 600 | image_tag:
                   class: 'header__heading-logo motion-reduce',
                   widths: widths,
@@ -147,7 +240,8 @@
                   width: settings.logo_width,
                   alt: logo_alt,
                   sizes: sizes,
-                  preload: true
+                  preload: true,
+                  data-animation: section.settings.logo_animation
                 }}
               </div>
             {%- else -%}
@@ -178,8 +272,8 @@
               <div class="header__heading-logo-wrapper">
                 {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
                 {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-                {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, 50vw{% endcapture %}
-                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+                {% capture sizes %}(min-width: 750px) {{ settings.logo_width }}px, {{ settings.logo_width_mobile }}{% endcapture %}
+                {% capture widths %}{{ settings.logo_width_mobile }}, {{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
                 {{ settings.logo | image_url: width: 600 | image_tag:
                   class: 'header__heading-logo',
                   widths: widths,
@@ -187,7 +281,8 @@
                   width: settings.logo_width,
                   alt: logo_alt,
                   sizes: sizes,
-                  preload: true
+                  preload: true,
+                  data-animation: section.settings.logo_animation
                 }}
               </div>
             {%- else -%}
@@ -469,6 +564,52 @@
       "info": "t:sections.header.settings.logo_help.content"
     },
     {
+      "type": "select",
+      "id": "logo_animation",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "fade",
+          "label": "Fade In"
+        },
+        {
+          "value": "slide",
+          "label": "Slide Down"
+        },
+        {
+          "value": "bounce",
+          "label": "Bounce"
+        },
+        {
+          "value": "scale",
+          "label": "Scale Up"
+        },
+        {
+          "value": "spin",
+          "label": "Spin"
+        },
+        {
+          "value": "pulse",
+          "label": "Pulse"
+        }
+      ],
+      "default": "none",
+      "label": "Logo Animation"
+    },
+    {
+      "type": "range",
+      "id": "animation_duration",
+      "min": 0.3,
+      "max": 5.0,
+      "step": 0.1,
+      "unit": "s",
+      "label": "Animation Duration",
+      "default": 0.8
+    },
+    {
       "type": "link_list",
       "id": "menu",
       "default": "main-menu",
@@ -613,6 +754,7 @@
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
     },
+    
     {
       "type": "range",
       "id": "padding_top",

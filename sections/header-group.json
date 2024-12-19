@@ -57,11 +57,12 @@
     "header": {
       "type": "header",
       "custom_css": [
-        ".header-wrapper {max-height: auto;}",
-        "@media (max-width: 769px) {.header__heading-logo {aspect-ratio: 4/3; }}"
+        "@media screen and (max-width: 768px) {.header__heading-logo {margin-left: 1.5rem; padding-left: 1.5rem; overflow: hidden; }}"
       ],
       "settings": {
         "logo_position": "top-center",
+        "logo_animation": "pulse",
+        "animation_duration": 2,
         "menu": "main-menu",
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "none",
